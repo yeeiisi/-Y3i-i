@@ -2,7 +2,7 @@ const output = document.getElementById("output");
 const commandInput = document.getElementById("commandInput");
 const promptElement = document.querySelector(".prompt");
 const inputLine = document.getElementById("inputLine"); 
- 
+
 let currentDir = "";
 let hackerMode = false;
 
