@@ -1,0 +1,108 @@
+/* styles.css */
+
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  padding: 20px;      /* margen igual en todos lados */
+  margin: 0;
+  height: 100vh;      /* toda la ventana */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1.title {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 0 10px 0;  /* margen solo abajo para separación */
+  text-align: center;
+  color: #00ff00;
+  font-size: 24px;
+}
+h1.title::after {
+  content: '_';
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.terminal {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  width: 100%;          /* ocupa ancho completo dentro del padding */
+  max-width: 1000px;    /* limita máximo ancho */
+  height: calc(100vh - 20px - 24px - 10px - 20px);
+  /* altura: ventana menos padding superior e inferior y espacio del h1 (aprox) */
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #0f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#output {
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Estilos de línea */
+.line-command {
+  color: #0f0;
+  font-weight: bold;
+}
+.line-output {
+  color: rgb(40, 189, 226);
+}
+.line-error {
+  color: #f55;
+}
+.line-intro {
+  color: #ff3ef5; 
+  font-style: italic;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 5px;
+  user-select: none;
+}
+
+#commandInput {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  font-family: monospace;
+  font-size: 1em;
+  outline: none;
+  width: 100%;
+}
+
+/* Scroll personalizado */
+#output::-webkit-scrollbar {
+  width: 8px;
+}
+#output::-webkit-scrollbar-track {
+  background: #000;
+}
+#output::-webkit-scrollbar-thumb {
+  background-color: #0f0;
+  border-radius: 4px;
+  border: 2px solid #000;
+}
+#output {
+  scrollbar-width: thin;
+  scrollbar-color: #0f0 #000;
+}
