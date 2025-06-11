@@ -5,7 +5,7 @@ const inputLine = document.getElementById("inputLine");
 
 let currentDir = "";
 let hackerMode = false;
-
+ 
 function updatePrompt() {
   promptElement.textContent = (currentDir || "~") + ">";
 }
