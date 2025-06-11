@@ -49,8 +49,8 @@ const introLines = [
   "Acceso a base de datos: OK",
   "Escaneando puertos...",
   "Acceso concedido.",
-  "Bienvenido.".
-  "Esceribe 'help' para ver los comandos disponibles"
+  "Bienvenido.",
+  "Escribe 'help' para ver los comandos disponibles"
 ];
 
 function typeLine(line, delay = 25) {
